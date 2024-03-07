@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>EmpMessage</title>
+</head>
+<body>
+	<h3>From Message Page!</h3>
+	<h2 th:text="${title}"></h2>
+	
+	Id: <span th:text="${eob.empId}"></span>
+	Name: <span th:text="${eob.empName}"></span>
+	Salary: <span th:text="${eob.empSal}"></span>
+	</br></br>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>SAL</th>
+		</tr>	
+		
+		<!-- for(Employee ob:list) -->
+		<tr th:each="ob:${list}">
+		<td th:text="${ob.empId}"></td>
+		<td th:text="${ob.empName}"></td>
+		<td th:text="${ob.empSal}"></td>
+		</tr>
+	</table>
+</body>
+</html>
